@@ -1,0 +1,63 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de Notificações por E-mail",
+    "version": "1.0.0",
+    "description": "API para envio de notificações via e-mail."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/api",
+      "description": "Servidor Local"
+    }
+  ],
+  "paths": {
+    "/notificar": {
+      "post": {
+        "summary": "Enviar notificação por e-mail",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "example": "usuario@email.com" },
+                  "subject": { "type": "string", "example": "Nova Notificação" },
+                  "message": { "type": "string", "example": "Você recebeu uma nova mensagem." }
+                },
+                "required": ["email", "subject", "message"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "E-mail enviado com sucesso",
+            "content": {
+              "application/json": {
+                "example": { "message": "E-mail enviado com sucesso!", "messageId": "123456789" }
+              }
+            }
+          },
+          "400": {
+            "description": "Erro na requisição",
+            "content": {
+              "application/json": {
+                "example": { "error": "Todos os campos são obrigatórios." }
+              }
+            }
+          },
+          "500": {
+            "description": "Erro ao enviar e-mail",
+            "content": {
+              "application/json": {
+                "example": { "error": "Erro ao enviar e-mail", "details": "Erro do servidor SMTP" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
