@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  hack_soat_auth:
-    image: wstecnologia/hack_soat_auth
-    container_name: hack_soat_auth
+  fiap_hacksoat_notification:
+    image: wstecnologia/fiap_hacksoat_notification
+    container_name: fiap_hacksoat_notification
     restart: always
     environment:
       - .env
