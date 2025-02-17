@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  hack_soat_auth:
+    image: wstecnologia/hack_soat_auth
+    container_name: hack_soat_auth
+    restart: always
+    environment:
+      - .env
+    ports:
+      - "3000:3000"
