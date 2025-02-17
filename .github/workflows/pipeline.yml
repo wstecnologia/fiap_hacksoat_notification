@@ -39,8 +39,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build --pull --rm -f "Dockerfile" -t wstecnologia/hack_soat_auth:latest .
+          docker build --pull --rm -f "Dockerfile" -t wstecnologia/fiap_hacksoat_notification:latest .
       
       - name: Push Docker image
         run: |
-          docker push wstecnologia/hack_soat_auth:latest
+          docker push wstecnologia/fiap_hacksoat_notification:latest
