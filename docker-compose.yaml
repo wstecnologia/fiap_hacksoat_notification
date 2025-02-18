@@ -5,7 +5,7 @@ services:
     image: wstecnologia/fiap_hacksoat_notification
     container_name: fiap_hacksoat_notification
     restart: always
-    environment:
+    env_file:
       - .env
     ports:
       - "3000:3000"
