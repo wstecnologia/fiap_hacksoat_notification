@@ -1,5 +1,5 @@
-import { notificationController } from "@/infrastructure/config/Container";
 import { Router } from "express";
+import { notificationController } from "../infrastructure/config/Container";
 
 const router = Router();
 

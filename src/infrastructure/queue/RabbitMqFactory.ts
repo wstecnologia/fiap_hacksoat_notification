@@ -1,5 +1,5 @@
-import { SendNotification } from "@/application/use-cases/SendNotification";
-import { IMessageQueue } from "@/domain/queues/IMessageQueue";
+import { SendNotification } from "../../application/use-cases/SendNotification";
+import { IMessageQueue } from "../../domain/queues/IMessageQueue";
 import { RabbitMQConnection } from "../config/rabbitMQConnection";
 import { EmailService } from "../email/EmailService";
 
