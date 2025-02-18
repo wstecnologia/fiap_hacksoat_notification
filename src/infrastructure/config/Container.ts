@@ -1,5 +1,5 @@
-import { SendNotification } from "@/application/use-cases/SendNotification";
-import { NotificationController } from "@/controllers/notificacaoController";
+import { SendNotification } from "../../application/use-cases/SendNotification";
+import { NotificationController } from "../../controllers/notificacaoController";
 import { EmailService } from "../email/EmailService";
 
 // Injeta dependências

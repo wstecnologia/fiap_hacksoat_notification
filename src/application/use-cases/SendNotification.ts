@@ -1,5 +1,5 @@
-import { INotificationService } from "@/domain/interfaces/INotificationService";
-import { Notification } from "@/domain/Notification";
+import { INotificationService } from "../../domain/interfaces/INotificationService";
+import { Notification } from "../../domain/Notification";
 
 export class SendNotification {
   constructor(private notificationService: INotificationService) {}

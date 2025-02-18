@@ -1,5 +1,5 @@
-import { SendNotification } from "@/application/use-cases/SendNotification";
 import { Request, Response } from "express";
+import { SendNotification } from "../application/use-cases/SendNotification";
 
 export class NotificationController {
   constructor(private sendNotification: SendNotification) {}

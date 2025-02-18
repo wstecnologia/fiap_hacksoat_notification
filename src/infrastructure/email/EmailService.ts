@@ -1,6 +1,6 @@
-import { INotificationService } from "@/domain/interfaces/INotificationService";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import { INotificationService } from "../../domain/interfaces/INotificationService";
 import { Notification } from "../../domain/Notification";
 
 dotenv.config();
